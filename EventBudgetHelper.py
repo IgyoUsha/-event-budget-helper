@@ -54,11 +54,21 @@ def budget_status(budget, total):
     else:
         return "Over Budget"
 
-#Test when we are within budget: Expected result is 1000
+#Test when we are within budget: 
 status = budget_status(15000, total)
 print(status)
 
-#Test when we are Exactly equal to budget: Expected result is 0
+#TTest when we are Exactly equal to budget: 
+status = budget_status(16000, total)
+print(status)
+
+#Test when we are Over the budget: 
+attendees = 20                  # 30000 + 10000
+food_per_person = 1000          # = 40000
+transport_per_person = 500
+venue_cost = 10000
+total = event_total(attendees, food_per_person, transport_per_person, venue_cost)
+
 status = budget_status(16000, total)
 print(status)
 
@@ -73,3 +83,26 @@ budget, over budget
 Issue: none
 
 """
+
+
+#defining event_summary(fourth function)
+def event_summary(event_name, total, status):
+  return f'{event_name}: total {total} naira {status}. '
+
+#testing event_summary with normal event name
+report = event_summary('Study Day' ,150000, 'Within  Budget')  #expected output : Study Day:total 15000 naira.Within budget
+print(report)
+
+#testing event_summary with changed event  name
+report = event_summary('Market Day' ,150000, 'Within  Budget')  #expected output : Market Day:total 15000 naira.Within budget
+print(report)
+
+"""HANDOVER NOTES 
+Component: event_summary
+Returns: formatted string report using f-string with event name,total and status.
+Tests: normal event name,changed event name """
+
+
+
+
+
