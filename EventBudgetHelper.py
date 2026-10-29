@@ -46,3 +46,30 @@ Tests: Normal attendee cost plus venue
        Zero attendees with a non-zero venue
 
 Issue: none """
+
+#Define budget_status function by using if else statement
+def budget_status(budget, total):
+    if total <= budget:
+        return "Within Budget"
+    else:
+        return "Over Budget"
+
+#Test when we are within budget: Expected result is 1000
+status = budget_status(15000, total)
+print(status)
+
+#Test when we are Exactly equal to budget: Expected result is 0
+status = budget_status(16000, total)
+print(status)
+
+
+""" HANDOVER Note
+Component: budget_status
+Returns: "Within budget" when
+total <= budget, otherwise
+"Over budget"
+Tests: below budget, exact
+budget, over budget
+Issue: none
+
+"""
