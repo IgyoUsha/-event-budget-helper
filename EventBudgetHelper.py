@@ -3,10 +3,10 @@ def participant_cost(attendees, food_per_person, transport_per_person):
 
 #------------ Test case for participant cost ---------------#
 # Normal attendees
-cost = participant_cost(30, 800, 200) ; print(cost)  # ___ Expected result ==> 30000
+cost = participant_cost(20, 1000, 500) ; print(cost)  # ___ Expected result ==> 30000
 
 # Zero attendees 
-cost = participant_cost(0, 800, 200) ; print(cost)        # ____ Expected reult ==> 0
+cost = participant_cost(0, 1000, 500) ; print(cost)        # ____ Expected reult ==> 0
 
 """ HANDOVER_NOTE
  Component: participant_cost
@@ -101,7 +101,6 @@ print(report)
 Component: event_summary
 Returns: formatted string report using f-string with event name,total and status.
 Tests: normal event name,changed event name """
-
 
 
 
